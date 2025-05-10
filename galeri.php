@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITORIA 01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    .wa-float img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .wa-float img:hover {
+      transform: scale(1.1);
+    }
+
+    .zoom-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .zoom-card img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .zoom-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px 15px;
+      display: none;
+    }
+
+    .zoom-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .zoom-card:hover .zoom-icon {
+      display: block;
+    }
+
+    .modal-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .banner {
+      /* background-color: white; */
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        padding: 30px 15px;
+      }
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Navbar -->
+  <div class="sticky-navbar">
+    <div class="bg-teal-900 text-white text-sm py-1">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="flex items-center space-x-4">
+          <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto flex flex-col items-center py-4">
+      <div class="flex flex-col items-center">
+        <div class="w-16 h-16 border-2 border-yellow-500 rounded-full flex items-center justify-center text-2xl font-bold text-black">
+          FITO<span class="text-yellow-500">RIA</span>01
+        </div>
+      </div>
+      <nav class="mt-4">
+        <ul class="flex flex-wrap justify-center gap-4 text-sm font-semibold uppercase">
+          <li><a href="index.php" class="hover:text-blue-500">Beranda</a></li>
+          <li><a href="produk.php" class="hover:text-blue-500">Produk Kami</a></li>
+          <li><a href="galeri.php" class="text-blue-500 border-b-2 border-red-500 pb-1">Galeri Produk</a></li>
+          <li><a href="kontak.php" class="hover:text-blue-500">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <section class="banner text-center">
+    <div class="container">
+      <h3 style="color: black;"><b>GALERI</b></h3>
+      <p class="mt-3 text-muted">
+      Jelajahi galeri produk FITORIA01 yang menampilkan berbagai wahana permainan anak dengan desain unik dan kualitas terbaik. Setiap gambar dalam galeri ini menggambarkan hasil karya kami yang telah digunakan di berbagai tempat rekreasi    </div>
+  </section>
+
+  <!-- Galeri Produk -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/gambar1.jpeg')">
+          <img src="images/gambar1.jpeg" alt="Produk 1">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/gambar2.jpeg')">
+          <img src="images/gambar2.jpeg" alt="Produk 2">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/gambar3.jpeg')">
+          <img src="images/gambar3.jpeg" alt="Produk 3">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Zoom -->
+  <div class="modal fade" id="zoomModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body text-center p-0">
+          <img id="zoomedImg" class="modal-img rounded" src="" alt="Zoomed">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/6281393223191" class="wa-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function zoomImage(src) {
+      document.getElementById("zoomedImg").src = src;
+      const zoomModal = new bootstrap.Modal(document.getElementById("zoomModal"));
+      zoomModal.show();
+    }
+  </script>
+</body>
+</html>

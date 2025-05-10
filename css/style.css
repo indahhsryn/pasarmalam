@@ -1,0 +1,48 @@
+/* style.css */
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  h2 {
+    font-weight: 800;
+  }
+
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @media (max-width: 767px) {
+    .bg-danger {
+      width: 100% !important;
+      bottom: -50px !important;
+      padding: 20px; /* Menyesuaikan padding */
+    }
+  
+    .btn {
+      width: 100% !important; /* Membuat tombol lebih lebar di mobile */
+    }
+  }
+  

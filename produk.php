@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITORIA 01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    .wa-float img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .wa-float img:hover {
+      transform: scale(1.1);
+    }
+
+    .banner {
+      /* background-color: #79c2c9; */
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .product-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-col {
+      margin-bottom: 30px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 767px) {
+      .banner h3 {
+        font-size: 1.5rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .sticky-navbar .container-fluid {
+        padding: 0 10px;
+      }
+      .sticky-navbar .d-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+      .sticky-navbar nav ul {
+        flex-direction: column;
+      }
+      .sticky-navbar nav ul li {
+        margin: 5px 0;
+      }
+      .product-col {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Main Navbar -->
+  <div class="sticky-navbar">
+    <div class="bg-teal-900 text-white text-sm py-1">
+      <div class="container-fluid px-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-4">
+      <!-- Logo -->
+      <div class="d-flex flex-column align-items-center">
+        <div class="w-16 h-16 border-2 border-yellow-500 rounded-circle d-flex align-items-center justify-content-center text-2xl font-bold text-black">
+          FITO<span class="text-yellow-500">RIA</span>01
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="mt-4">
+        <ul class="d-flex justify-content-center list-unstyled mb-0">
+          <li class="mx-3"><a href="index.php" class="text-black text-decoration-none">Beranda</a></li>
+          <li class="mx-3"><a href="produk.php" class="text-blue-500 border-bottom border-blue-500 pb-1">Produk Kami</a></li>
+          <li class="mx-3"><a href="galeri.php" class="text-black text-decoration-none">Galeri Produk</a></li>
+          <li class="mx-3"><a href="kontak.php" class="text-black text-decoration-none">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Section: Banner -->
+  <section class="banner">
+    <div class="container">
+      <h3 style="color: black;"><b>SEMUA PRODUK KAMI</b></h3>
+      <p class="mt-3 text-muted">
+        Nikmati beragam pilihan wahana permainan anak dari FITORIA01, seperti kereta mini fiber, odong-odong, kora-kora, dan mainan custom lainnya yang dirancang menarik dan aman. Sangat ideal untuk menunjang bisnis hiburan anak di taman bermain, pusat perbelanjaan, atau destinasi wisata. Produk kami dibuat dengan bahan pilihan dan desain yang atraktif demi menghadirkan pengalaman bermain yang menyenangkan dan terpercaya.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section: Produk 3 Kolom dengan Card -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/gambar1.jpeg" class="card-img-top" alt="Kereta Mini Karakter Minions">
+          <div class="card-body">
+            <h5 class="card-title">Kereta Mini Karakter Minions</h5>
+            <p class="card-text">Mainan anak dengan tema karakter Minions, cocok untuk wahana bermain anak-anak di indoor/outdoor.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/gambar2.jpeg" class="card-img-top" alt="Kereta Mini Pesawat">
+          <div class="card-body">
+            <h5 class="card-title">Kereta Mini Pesawat</h5>
+            <p class="card-text">Desain pesawat yang menarik untuk anak-anak, memberikan pengalaman bermain yang seru dan edukatif.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/gambar3.jpeg" class="card-img-top" alt="Kereta Mini Karakter Kartun">
+          <div class="card-body">
+            <h5 class="card-title">Kereta Mini Karakter Kartun</h5>
+            <p class="card-text">Wahana dengan berbagai karakter kartun yang lucu, cocok untuk menarik perhatian anak-anak.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/6281393223191" class="wa-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript for Scroll Animation -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+      observer.observe(el);
+      el.classList.add('fade-in-up');
+    });
+  </script>
+</body>
+</html>

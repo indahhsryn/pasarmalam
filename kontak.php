@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITORIA 01</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Tailwind (optional) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <style>
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+    }
+
+    .wa-float img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .wa-float img:hover {
+      transform: scale(1.1);
+    }
+
+    .contact-section {
+      background: white;
+      padding: 60px 30px;
+      border-radius: 15px;
+      margin: 50px auto;
+      max-width: 1100px;
+    }
+
+    .contact-heading {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .contact-subtext {
+      font-size: 16px;
+      color: #777;
+    }
+
+    .btn-learn-more {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+    }
+
+    @media (max-width: 576px) {
+      .wa-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+      }
+
+      .contact-heading {
+        font-size: 28px;
+      }
+
+      .contact-subtext {
+        font-size: 14px;
+      }
+
+      .btn-learn-more {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="bg-teal-900 text-white text-sm py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <i class="fas fa-phone-alt me-2"></i> 081393223191
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="container text-center py-4">
+    <!-- Logo -->
+    <div class="mb-3">
+      <div class="d-inline-flex align-items-center justify-content-center border border-2 border-warning rounded-circle p-3 fs-4 fw-bold text-black">
+        FITO<span class="text-warning">RIA</span>01
+      </div>
+    </div>
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav justify-content-center text-uppercase fw-semibold">
+        <li class="nav-item"><a class="nav-link text-dark" href="index.php">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="produk.php">Produk Kami</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="galeri.php">Galeri Produk</a></li>
+        <li class="nav-item"><a class="nav-link text-primary border-bottom border-danger pb-1" href="kontak.php">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="container contact-section shadow">
+    <div class="row align-items-center gx-5 gy-4">
+      <!-- Text content -->
+      <div class="col-md-6 text-center text-md-start">
+        <h2 class="contact-heading">Hubungi Kami<br><span class="text-dark">FITORIA 01</span></h2>
+        <p class="contact-subtext mt-3">
+          Selamat datang di halaman kontak Kereta Mini Fiber. Kami melayani pembuatan berbagai wahana mainan anak seperti kereta mini fiber, odong-odong, kora-kora, dan lainnya. Jika Anda memiliki pertanyaan atau ingin memesan, silakan hubungi kami melalui WhatsApp pada kontak yang tertera di bawah ini. Kami siap membantu Anda!
+        </p>
+        <a href="https://wa.me/6281393223191" target="_blank" class="btn btn-learn-more mt-3">Hubungi Kami</a>
+      </div>
+      <!-- Image -->
+      <div class="col-md-6 text-center">
+        <img src="images/contact-illustration.png" alt="Contact Illustration" class="contact-img img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6281393223191" class="wa-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
