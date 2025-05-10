@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITORIA 01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      cursor: pointer;
+    }
+    .wa-float img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+    .wa-float img:hover {
+      transform: scale(1.1);
+    }
+    .section-bg {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+    }
+
+    .section-content h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .red-line {
+      width: 50px;
+      height: 3px;
+      background-color: red;
+      margin-bottom: 20px;
+    }
+
+    .video-thumbnail {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: white;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    .play-button:hover {
+      opacity: 1;
+    }
+
+    .info-section {
+      background-color: #343a40;
+      color: white;
+      padding: 60px 0;
+    }
+
+    .info-section .bi {
+      font-size: 3rem;
+    }
+
+    .info-section .btn {
+      width: 100%;
+    }
+
+    .bg-dark-custom {
+      background-color: #343a40;
+    }
+
+    .bg-danger-custom {
+      background-color: #dc3545;
+    }
+
+  </style>
+</head>
+<body class="font-sans">
+  <!-- Isi halaman di sini -->
+
+<!-- Top Bar -->
+<div class="sticky-navbar">
+  <div class="bg-teal-900 text-white text-sm py-1">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 text-center md:text-left">
+      <div class="flex items-center justify-center space-x-4">
+        <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="container mx-auto flex flex-col items-center py-4 px-4">
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 border-2 border-yellow-500 rounded-full flex items-center justify-center text-2xl font-bold text-black">
+        FITO<span class="text-yellow-500">RIA</span>01
+      </div>
+    </div>
+    <nav class="mt-4 w-full">
+      <ul class="flex flex-wrap justify-center gap-4 text-sm font-semibold uppercase">
+        <li><a href="#" class="text-blue-500 border-b-2 border-blue-500 pb-1">Beranda</a></li>
+        <li><a href="produk.html" class="hover:text-blue-500">Produk Kami</a></li>
+        <li><a href="galeri.html" class="hover:text-blue-500">Galeri Produk</a></li>
+        <li><a href="kontak.html" class="hover:text-blue-500">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<section id="hero" class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
+  <div class="relative">
+    <a href="#produk" class="absolute -top-12 left-0 w-full max-w-[400px] h-[60px] bg-blue-700 shadow-md hover:opacity-80 transition" style="clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);"></a>
+    <br>
+    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight uppercase text-black">
+      FITORIA<br>01
+    </h1>
+    <div class="w-16 h-1 bg-red-500 mt-2 mb-6"></div>
+    <p class="text-gray-700 text-lg md:text-xl leading-relaxed">
+      Kami menyediakan berbagai pilihan wahana pasar malam, dan wahana wisata yang tidak hanya menyenangkan tetapi juga terjangkau dan berkualitas tinggi, siap memberikan pengalaman tak terlupakan untuk setiap pengunjung.
+    </p>
+  </div>
+  <div class="relative">
+    <img src="images/wahana.png" alt="Wahana Kereta Fiber" class="rounded shadow-lg z-10 relative">
+    <div class="absolute top-0 left-0 w-1 h-full bg-red-500 transform -skew-x-12"></div>
+    <div class="absolute bottom-0 right-0 w-1/3 h-12 bg-gray-100 shadow-lg transform rotate-3 translate-y-4 z-0"></div>
+  </div>
+</section>
+<!-- Section Informasi -->
+<section class="relative w-full flex">
+  <div class="w-1/2 bg-white flex items-center justify-center">
+    <div class="text-center">
+      <h2 class="text-4xl font-extrabold italic text-gray-300 leading-relaxed uppercase">PILIHAN TERBAIK<br>TERBUKTI HANDAL<br>DAN MEMUASKAN</h2>
+    </div>
+  </div>
+  <div class="w-1/2 relative bg-gray-100 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gray-100" style="clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);"></div>
+    <div class="relative max-w-md text-center p-8">
+      <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
+        Selamat datang di Fitoria01, penyedia wahana permainan anak terpercaya! Kami menjual berbagai macam wahana permainan fiber, wahana pasar malam, wahana permainan wisata, dan wahana mall berkualitas tinggi.
+      </p>
+      <a href="produk.html" class="inline-flex items-center px-4 py-2 bg-red-600 text-white font-bold rounded shadow hover:bg-red-700 transition">
+        <i class="fas fa-cube mr-2"></i> Produk Kami
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Slider Section -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex justify-center"><img src="images/gambar1.jpeg" alt="Gambar 1" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar2.jpeg" alt="Gambar 2" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar3.jpeg" alt="Gambar 3" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar4.jpeg" alt="Gambar 4" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar5.jpeg" alt="Gambar 5" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar6.jpeg" alt="Gambar 6" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar7.jpeg" alt="Gambar 7" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar8.jpeg" alt="Gambar 8" class="rounded-lg shadow-lg"></div>
+        <div class="swiper-slide flex justify-center"><img src="images/gambar9.jpeg" alt="Gambar 9" class="rounded-lg shadow-lg"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<!-- Section Alasan Memilih Kami -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Gambar Kiri -->
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img 
+        src="images/gambarmiring.jpeg" 
+        alt="Gambar Miring" 
+        class="w-4/5 rounded-lg shadow-lg transform -skew-x-6 object-cover"
+      >
+    </div>
+
+    <!-- Konten Kanan -->
+    <div class="w-full md:w-1/2 text-left">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 leading-snug">KENAPA MEMILIH KAMI?</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        
+        <!-- Fitur 1 -->
+        <div class="flex items-center space-x-3">
+          <div class="text-red-500 text-3xl">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <span class="text-base md:text-lg">AHLI DI BIDANGNYA</span>
+        </div>
+
+        <!-- Fitur 2 -->
+        <div class="flex items-center space-x-3">
+          <div class="text-red-500 text-3xl">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <span class="text-base md:text-lg">HARGA BERSAING & TERJANGKAU</span>
+        </div>
+
+        <!-- Fitur 3 -->
+        <div class="flex items-center space-x-3">
+          <div class="text-red-500 text-3xl">
+            <i class="fas fa-lock"></i>
+          </div>
+          <span class="text-base md:text-lg">KEAMANAN TERJAMIN</span>
+        </div>
+
+        <!-- Fitur 4 -->
+        <div class="flex items-center space-x-3">
+          <div class="text-red-500 text-3xl">
+            <i class="fas fa-car"></i>
+          </div>
+          <span class="text-base md:text-lg">PROSES PENGERJAAN CEPAT & TEPAT</span>
+        </div>
+
+        <!-- Fitur 5 -->
+        <div class="flex items-center space-x-3">
+          <div class="text-red-500 text-3xl">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <span class="text-base md:text-lg">MATERIAL BERKUALITAS SNI TERPERCAYA</span>
+        </div>
+
+        <!-- Fitur 6 -->
+        <div class="flex items-center space-x-3">
+          <div class="text-red-500 text-3xl">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <span class="text-base md:text-lg">GARANSI & LAYANAN PELANGGAN TERBAIK</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Section Produk Kami -->
+<section class="container text-center my-5">
+  <h2 class="fw-bold mb-4">PRODUK KAMI</h2>
+
+  <div class="row">
+    <!-- Ulangi 16x untuk 16 gambar -->
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar1.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 1">
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar2.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 2">
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar3.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 3">
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar4.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 4">
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar5.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 5">
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar6.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 6">
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar7.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 7">
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+      <img src="images/gambar8.jpeg" class="img-fluid rounded shadow-sm" alt="Produk 8">
+    </div>
+  </div>
+
+  <a href="produk.html" class="btn btn-primary mt-3">Lihat Produk Kami</a>
+</section>
+
+
+<section class="bg-dark text-light py-5 position-relative overflow-visible">
+  <div class="container">
+    <div class="row">
+      <!-- Kiri -->
+      <div class="col-md-7 col-12">
+        <h2 class="fw-bold">LANGKAH MUDAH UNTUK MEMESAN</h2>
+        <hr class="border-danger border-2 opacity-100 w-25 mb-3">
+        <p>Seluruh produk kami dibuat berdasarkan pesanan (by request), sehingga kami tidak menyediakan stok siap kirim. Berikut proses pemesanan yang perlu Anda ketahui:</p>
+
+        <div class="row text-danger fw-semibold my-4">
+          <div class="col-6 mb-3 d-flex align-items-center">
+            <i class="bi bi-cash-coin me-2 fs-3"></i> UANG MUKA 30% DARI TOTAL PESANAN.
+          </div>
+          <div class="col-6 mb-3 d-flex align-items-center">
+            <i class="bi bi-wallet2 me-2 fs-3"></i> SISTEM PEMBAYARAN BERTAHAP SEBANYAK 3 KALI.
+          </div>
+          <div class="col-6 mb-3 d-flex align-items-center">
+            <i class="bi bi-clock-history me-2 fs-3"></i> WAKTU PRODUKSI ESTIMASI 30 HARI.
+          </div>
+          <div class="col-6 mb-3 d-flex align-items-center">
+            <i class="bi bi-calendar2-check me-2 fs-3"></i> MASA AKTIF ORDER SELAMA 1 BULAN.
+          </div>
+        </div>
+      </div>
+
+      <!-- Kanan -->
+      <div class="col-md-5 col-12 position-relative">
+        <blockquote class="fst-italic text-start mb-4">
+          “Punya pertanyaan atau ingin konsultasi dulu? Klik tombol WhatsApp kami sekarang juga!”
+        </blockquote>
+
+        <div class="bg-danger text-light p-4 rounded shadow position-relative" style="bottom: -30px; left: 0; height: 250px !important; width: 100%; display: flex; flex-direction: column; justify-content: space-between; z-index: 1;">
+          <p class="mb-3">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            Lokasi workshop kami berada di Klaten, Jawa Tengah. Anda dipersilakan datang langsung untuk melihat proses produksi secara nyata.
+          </p>
+          <a href="#" class="btn btn-light text-danger fw-bold" style="align-self: flex-end; margin-right: 20px; width: 150px;">KUNJUNGI KAMI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+<!-- SECTION 1 -->
+<section class="section-bg">
+  <div class="container section-content">
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- Gunakan kelas fs-1 hingga fs-5 untuk ukuran font responsif -->
+        <h2 class="fs-4 fs-md-2">KAMI HADIR UNTUK MEMBERIKAN<br>KEBAHAGIAAN & RASA AMAN</h2>
+        <div class="red-line"></div>
+        <p>
+          Setiap mainan yang kami produksi bukan sekadar wahana bermain—tapi sarana menciptakan tawa, keceriaan, dan kenangan indah bagi anak-anak. Dirancang dengan bahan berkualitas dan keamanan teruji, semua produk kami dibuat sepenuh hati, bergaransi, dan siap menjadi investasi terbaik untuk usaha hiburan Anda.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- SECTION VIDEO -->
+  <section class="video-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="video-thumbnail">
+            <img src="images/gambar4.jpeg" alt="Kereta Mini">
+            <span class="play-button">&#9658;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION INFO BAWAH -->
+  <section class="info-section py-5">
+    <div class="container">
+      <div class="row gy-4 text-center text-md-start">
+        <!-- Harga -->
+        <div class="col-md-4">
+          <div class="p-4 h-100 bg-danger-custom rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-tag fs-1 mb-3"></i>
+            <h5 class="fw-bold text-uppercase mb-2">Butuh Info Harga?</h5>
+            <p class="mb-0">Dapatkan penawaran terbaik & harga paling bersahabat dengan menghubungi tim kami sekarang.</p>
+          </div>
+        </div>
+        <!-- Lokasi -->
+        <div class="col-md-4">
+          <div class="p-4 h-100 bg-dark-custom rounded shadow-sm d-flex flex-column align-items-center">
+            <i class="bi bi-geo-alt-fill fs-1 text-danger mb-3"></i>
+            <h5 class="fw-bold text-uppercase mb-2">Lokasi Workshop</h5>
+            <p class="mb-0">Plembon RT10/RW11, Ketandan, Klaten Utara - Jawa Tengah. Silakan berkunjung ke tempat produksi kami.</p>
+          </div>
+        </div>
+        <!-- Kontak -->
+        <div class="col-md-4">
+          <div class="p-4 h-100 bg-light rounded shadow-sm d-flex flex-column align-items-center text-dark">
+            <i class="bi bi-phone fs-1 text-success mb-3"></i>
+            <h5 class="fw-bold text-uppercase mb-2">Hubungi Kami</h5>
+            <p class="mb-1">Ingin tanya-tanya dulu? Tim kami siap melayani Anda dengan ramah.</p>
+            <p class="fw-bold mb-2">0813-9322-3191</p>
+            <a href="https://wa.me/6281393223191" class="btn btn-success fw-bold">Konsultasi via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a href="https://wa.me/6281393223191" class="wa-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+  <footer class="bg-dark text-light py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Tentang Kami -->
+      <div class="col-md-4 mb-4">
+        <h4 class="text-danger mb-3">Tentang Kami</h4>
+        <p style="line-height: 1.6;">
+          Fitoria01 adalah produsen & penjual langsung berbagai wahana permainan anak berkualitas seperti kereta mini, komedi putar. Kami hadir untuk menciptakan keceriaan di setiap sudut Indonesia.
+        </p>
+      </div>
+
+      <!-- Sosial Media -->
+      <div class="col-md-4 mb-4">
+        <h4 class="text-danger mb-3">Ikuti Kami</h4>
+        <p>Temukan informasi terbaru dan promo menarik di:</p>
+        <p><strong>Facebook:</strong> Pembuatan Kereta Mini Fiber</p>
+      </div>
+
+      <!-- Produk Unggulan -->
+      <div class="col-md-4 mb-4">
+        <h4 class="text-danger mb-3">Produk Unggulan</h4>
+        <p style="font-size: 14px; line-height: 1.6;">
+          • Kereta Mini • Komedi Putar • Rumah Balon • Sepeda Air<br>
+          • Odong-Odong • Bianglala Mini • Kiddie Ride • Mainan Pasar Malam
+        </p>
+      </div>
+    </div>
+
+    <!-- Horizontal Line -->
+    <hr class="my-4" style="border-color: #444;">
+
+    <!-- Footer Bottom -->
+    <div class="text-center" style="font-size: 14px; color: #888;">
+      &copy; 2025 Fitoria01. Semua Hak Dilindungi. Dibuat dengan sepenuh hati untuk keceriaan anak Indonesia.
+    </div>
+  </div>
+</footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
