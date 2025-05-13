@@ -89,33 +89,63 @@
 </head>
 <body>
 
-  <!-- Top Bar -->
+<!-- Sticky Navbar -->
+<div class="sticky-navbar">
+  <!-- Topbar -->
   <div class="bg-teal-900 text-white text-sm py-1">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div>
-        <i class="fas fa-phone-alt me-2"></i> 081393223191
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 text-center md:text-left">
+      <div class="flex items-center justify-center space-x-4">
+        <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
       </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <div class="container text-center py-4">
-    <!-- Logo -->
-    <div class="mb-3">
-      <div class="d-inline-flex align-items-center justify-content-center border border-2 border-warning rounded-circle p-3 fs-4 fw-bold text-black">
-        FITO<span class="text-warning">RIA</span>01
-      </div>
+  <!-- Main Navbar -->
+  <div class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 relative">
+      
+<!-- Logo tengah (desktop only) -->
+<div class="hidden md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2 mb-4">
+  <div class="relative flex items-center justify-center space-x-1 text-2xl font-bold">
+    
+    <!-- 'FI' -->
+    <span class="text-black">FI</span>
+    
+    <!-- 'TORIA' dengan lingkaran -->
+    <div class="relative flex items-center justify-center">
+      <div class="absolute w-20 h-20 border-2 border-yellow-500 rounded-full"></div>
+      <span class="text-black-500 z-10">TO</span>
+      <span class="text-yellow-500 z-10">RIA</span>
+
     </div>
-    <!-- Navigation -->
-    <nav>
-      <ul class="nav justify-content-center text-uppercase fw-semibold">
-        <li class="nav-item"><a class="nav-link text-dark" href="index.html">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="produk.html">Produk Kami</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="galeri.html">Galeri Produk</a></li>
-        <li class="nav-item"><a class="nav-link text-primary border-bottom border-danger pb-1" href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
+
+    <!-- '01' -->
+    <span class="text-black">01</span>
   </div>
+</div>
+
+
+
+      <!-- Hamburger menu (mobile only) -->
+      <div class="w-full flex justify-end md:hidden">
+        <button id="menu-toggle" class="text-green-600 text-3xl focus:outline-none">
+          &#9776;
+        </button>
+      </div>
+
+      <!-- Navigasi -->
+      <nav id="menu" class="w-full mt-4 md:mt-0 hidden md:flex md:justify-center" style="margin-top: 100px !important;">
+        <ul class="flex flex-col md:flex-row gap-6 text-sm font-semibold uppercase text-center">
+          <li><a href="index.html" class="hover:text-blue-500">Beranda</a></li>
+          <li><a href="produk.html" class="hover:text-blue-500">Produk Kami</a></li>
+          <li><a href="galeri.html" class="hover:text-blue-500">Galeri Produk</a></li>
+          <li><a href="kontak.html" class="text-blue-500 border-b-2 border-red-500 pb-1">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
 
   <!-- Contact Section -->
   <div class="container contact-section shadow">
@@ -124,7 +154,7 @@
       <div class="col-md-6 text-center text-md-start">
         <h2 class="contact-heading">Hubungi Kami<br><span class="text-dark">FITORIA 01</span></h2>
         <p class="contact-subtext mt-3">
-          Selamat datang di halaman kontak Kereta Mini Fiber. Kami melayani pembuatan berbagai wahana mainan anak seperti kereta mini fiber, odong-odong, kora-kora, dan lainnya. Jika Anda memiliki pertanyaan atau ingin memesan, silakan hubungi kami melalui WhatsApp pada kontak yang tertera di bawah ini. Kami siap membantu Anda!
+          Selamat datang di halaman kontak FITORIA01. Kami melayani pembuatan berbagai wahana mainan anak seperti bianglala, bebekair, kora-kora, dan lainnya. Jika Anda memiliki pertanyaan atau ingin memesan, silakan hubungi kami melalui WhatsApp pada kontak yang tertera di bawah ini. Kami siap membantu Anda!
         </p>
         <a href="https://wa.me/6281393223191" target="_blank" class="btn btn-learn-more mt-3">Hubungi Kami</a>
       </div>

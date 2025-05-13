@@ -107,7 +107,9 @@
   <!-- Isi halaman di sini -->
 
 <!-- Top Bar -->
+<!-- Sticky Navbar -->
 <div class="sticky-navbar">
+  <!-- Topbar -->
   <div class="bg-teal-900 text-white text-sm py-1">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 text-center md:text-left">
       <div class="flex items-center justify-center space-x-4">
@@ -117,22 +119,60 @@
   </div>
 
   <!-- Main Navbar -->
-  <div class="container mx-auto flex flex-col items-center py-4 px-4">
-    <div class="flex flex-col items-center">
-      <div class="w-16 h-16 border-2 border-yellow-500 rounded-full flex items-center justify-center text-2xl font-bold text-black">
-        FITO<span class="text-yellow-500">RIA</span>01
-      </div>
+  <div class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 relative">
+      
+<!-- Logo tengah (desktop only) -->
+<div class="hidden md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2 mb-4">
+  <div class="relative flex items-center justify-center space-x-1 text-2xl font-bold">
+    
+    <!-- 'FI' -->
+    <span class="text-black">FI</span>
+    
+    <!-- 'TORIA' dengan lingkaran -->
+    <div class="relative flex items-center justify-center">
+      <div class="absolute w-20 h-20 border-2 border-yellow-500 rounded-full"></div>
+      <span class="text-black-500 z-10">TO</span>
+      <span class="text-yellow-500 z-10">RIA</span>
+
     </div>
-    <nav class="mt-4 w-full">
-      <ul class="flex flex-wrap justify-center gap-4 text-sm font-semibold uppercase">
-        <li><a href="#" class="text-blue-500 border-b-2 border-blue-500 pb-1">Beranda</a></li>
-        <li><a href="produk.html" class="hover:text-blue-500">Produk Kami</a></li>
-        <li><a href="galeri.html" class="hover:text-blue-500">Galeri Produk</a></li>
-        <li><a href="kontak.html" class="hover:text-blue-500">Kontak</a></li>
-      </ul>
-    </nav>
+
+    <!-- '01' -->
+    <span class="text-black">01</span>
   </div>
 </div>
+
+
+
+      <!-- Hamburger menu (mobile only) -->
+      <div class="w-full flex justify-end md:hidden">
+        <button id="menu-toggle" class="text-green-600 text-3xl focus:outline-none">
+          &#9776;
+        </button>
+      </div>
+
+      <!-- Navigasi -->
+      <nav id="menu" class="w-full mt-4 md:mt-0 hidden md:flex md:justify-center" style="margin-top: 100px !important;">
+        <ul class="flex flex-col md:flex-row gap-6 text-sm font-semibold uppercase text-center">
+          <li><a href="#" class="text-blue-500 border-b-2 border-red-500 pb-1">Beranda</a></li>
+          <li><a href="produk.html" class="hover:text-blue-500">Produk Kami</a></li>
+          <li><a href="galeri.html" class="hover:text-blue-500">Galeri Produk</a></li>
+          <li><a href="kontak.html" class="hover:text-blue-500">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- Toggle Menu Script -->
+
+
+<!-- Script Hamburger Toggle -->
+
+
+
+
+
 <section id="hero" class="container mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
   <div class="relative">
     <a href="#produk" class="absolute -top-12 left-0 w-full max-w-[400px] h-[60px] bg-blue-700 shadow-md hover:opacity-80 transition" style="clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);"></a>
@@ -307,22 +347,27 @@
         <h2 class="fw-bold">LANGKAH MUDAH UNTUK MEMESAN</h2>
         <hr class="border-danger border-2 opacity-100 w-25 mb-3">
         <p>Seluruh produk kami dibuat berdasarkan pesanan (by request), sehingga kami tidak menyediakan stok siap kirim. Berikut proses pemesanan yang perlu Anda ketahui:</p>
-
+      
         <div class="row text-danger fw-semibold my-4">
           <div class="col-6 mb-3 d-flex align-items-center">
-            <i class="bi bi-cash-coin me-2 fs-3"></i> UANG MUKA 30% DARI TOTAL PESANAN.
+            <i class="bi bi-clipboard-check me-2 fs-3"></i> 1. DEAL TERLEBIH DAHULU.
           </div>
           <div class="col-6 mb-3 d-flex align-items-center">
-            <i class="bi bi-wallet2 me-2 fs-3"></i> SISTEM PEMBAYARAN BERTAHAP SEBANYAK 3 KALI.
+            <i class="bi bi-cash-coin me-2 fs-3"></i> 2. UANG MUKA (DP) 30% DARI TOTAL PESANAN.
           </div>
           <div class="col-6 mb-3 d-flex align-items-center">
-            <i class="bi bi-clock-history me-2 fs-3"></i> WAKTU PRODUKSI ESTIMASI 30 HARI.
+            <i class="bi bi-gear me-2 fs-3"></i> 3. PROSES PENGERJAAN ESTIMASI 30 HARI.
           </div>
           <div class="col-6 mb-3 d-flex align-items-center">
-            <i class="bi bi-calendar2-check me-2 fs-3"></i> MASA AKTIF ORDER SELAMA 1 BULAN.
+            <i class="bi bi-truck me-2 fs-3"></i> 4. PENGIRIMAN SETELAH PENGERJAAN SELESAI.
+          </div>
+          <div class="col-6 mb-3 d-flex align-items-center">
+            <i class="bi bi-wallet2 me-2 fs-3"></i> 5. PELUNASAN SEBELUM PENGIRIMAN.
           </div>
         </div>
       </div>
+      
+      
 
       <!-- Kanan -->
       <div class="col-md-5 col-12 position-relative">
@@ -333,9 +378,9 @@
         <div class="bg-danger text-light p-4 rounded shadow position-relative" style="bottom: -30px; left: 0; height: 250px !important; width: 100%; display: flex; flex-direction: column; justify-content: space-between; z-index: 1;">
           <p class="mb-3">
             <i class="bi bi-geo-alt-fill me-2"></i>
-            Lokasi workshop kami berada di Klaten, Jawa Tengah. Anda dipersilakan datang langsung untuk melihat proses produksi secara nyata.
+            Lokasi Fitoria01 kami berada di:  Kwoso, RT.03/RW.02, Kwarsa, Gergunung, Kec. Klaten Utara, Kabupaten Klaten, Jawa Tengah.
           </p>
-          <a href="#" class="btn btn-light text-danger fw-bold" style="align-self: flex-end; margin-right: 20px; width: 150px;">KUNJUNGI KAMI</a>
+          <a href="https://maps.app.goo.gl/aVcmogaUeFmY18WM7" class="btn btn-light text-danger fw-bold" style="align-self: flex-end; margin-right: 20px; width: 150px;">KUNJUNGI KAMI</a>
         </div>
       </div>
     </div>
@@ -409,8 +454,9 @@
         <div class="col-md-4">
           <div class="p-4 h-100 bg-dark-custom rounded shadow-sm d-flex flex-column align-items-center">
             <i class="bi bi-geo-alt-fill fs-1 text-danger mb-3"></i>
-            <h5 class="fw-bold text-uppercase mb-2">Lokasi Workshop</h5>
-            <p class="mb-0">Plembon RT10/RW11, Ketandan, Klaten Utara - Jawa Tengah. Silakan berkunjung ke tempat produksi kami.</p>
+            <h5 class="fw-bold text-uppercase mb-2">Lokasi Fitoria01</h5>
+            <p class="mb-0"> Kwoso, RT.03/RW.02, Kwarsa, Gergunung, Kec. Klaten Utara, Kabupaten Klaten, Jawa Tengah.
+            </p>
           </div>
         </div>
         <!-- Kontak -->
@@ -436,7 +482,7 @@
       <div class="col-md-4 mb-4">
         <h4 class="text-danger mb-3">Tentang Kami</h4>
         <p style="line-height: 1.6;">
-          Fitoria01 adalah produsen & penjual langsung berbagai wahana permainan anak berkualitas seperti kereta mini, komedi putar. Kami hadir untuk menciptakan keceriaan di setiap sudut Indonesia.
+          Fitoria01 adalah produsen & penjual langsung berbagai wahana permainan anak berkualitas seperti Komedi  putar, Komedi safari. Kami hadir untuk menciptakan keceriaan di setiap sudut Indonesia.
         </p>
       </div>
 
@@ -444,15 +490,17 @@
       <div class="col-md-4 mb-4">
         <h4 class="text-danger mb-3">Ikuti Kami</h4>
         <p>Temukan informasi terbaru dan promo menarik di:</p>
-        <p><strong>Facebook:</strong> Pembuatan Kereta Mini Fiber</p>
+        <p><strong>Facebook:</strong> Fitoria 01</p>
+        <p><strong>Tiktok:</strong> Fitoria 01</p>
+
       </div>
 
       <!-- Produk Unggulan -->
       <div class="col-md-4 mb-4">
         <h4 class="text-danger mb-3">Produk Unggulan</h4>
         <p style="font-size: 14px; line-height: 1.6;">
-          • Kereta Mini • Komedi Putar • Rumah Balon • Sepeda Air<br>
-          • Odong-Odong • Bianglala Mini • Kiddie Ride • Mainan Pasar Malam
+          • Hely Putar • Kuda Putar • Bebebk air • Kora kora<br>
+          • kereta rel tomas • Bianglala  • Kora Kora • Ontang Anting
         </p>
       </div>
     </div>
@@ -468,6 +516,15 @@
 </footer>
 
   <!-- Swiper JS -->
+<!-- Script untuk toggle hamburger -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

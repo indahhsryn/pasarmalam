@@ -95,23 +95,54 @@
 <body class="font-sans">
 
   <!-- Navbar -->
-  <div class="sticky-navbar">
-    <div class="bg-teal-900 text-white text-sm py-1">
-      <div class="container mx-auto flex justify-between items-center px-4">
-        <div class="flex items-center space-x-4">
-          <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
-        </div>
+<!-- Sticky Navbar -->
+<div class="sticky-navbar">
+  <!-- Topbar -->
+  <div class="bg-teal-900 text-white text-sm py-1">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 text-center md:text-left">
+      <div class="flex items-center justify-center space-x-4">
+        <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
       </div>
     </div>
-    <div class="container mx-auto flex flex-col items-center py-4">
-      <div class="flex flex-col items-center">
-        <div class="w-16 h-16 border-2 border-yellow-500 rounded-full flex items-center justify-center text-2xl font-bold text-black">
-          FITO<span class="text-yellow-500">RIA</span>01
-        </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 relative">
+      
+<!-- Logo tengah (desktop only) -->
+<div class="hidden md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2 mb-4">
+  <div class="relative flex items-center justify-center space-x-1 text-2xl font-bold">
+    
+    <!-- 'FI' -->
+    <span class="text-black">FI</span>
+    
+    <!-- 'TORIA' dengan lingkaran -->
+    <div class="relative flex items-center justify-center">
+      <div class="absolute w-20 h-20 border-2 border-yellow-500 rounded-full"></div>
+      <span class="text-black-500 z-10">TO</span>
+      <span class="text-yellow-500 z-10">RIA</span>
+
+    </div>
+
+    <!-- '01' -->
+    <span class="text-black">01</span>
+  </div>
+</div>
+
+
+
+      <!-- Hamburger menu (mobile only) -->
+      <div class="w-full flex justify-end md:hidden">
+        <button id="menu-toggle" class="text-green-600 text-3xl focus:outline-none">
+          &#9776;
+        </button>
       </div>
-      <nav class="mt-4">
-        <ul class="flex flex-wrap justify-center gap-4 text-sm font-semibold uppercase">
-          <li><a href="index.html" class="hover:text-blue-500">Beranda</a></li>
+
+      <!-- Navigasi -->
+      <nav id="menu" class="w-full mt-4 md:mt-0 hidden md:flex md:justify-center" style="margin-top: 100px !important;">
+        <ul class="flex flex-col md:flex-row gap-6 text-sm font-semibold uppercase text-center">
+          <li><a href="#" class="hover:text-blue-500">Beranda</a></li>
           <li><a href="produk.html" class="hover:text-blue-500">Produk Kami</a></li>
           <li><a href="galeri.html" class="text-blue-500 border-b-2 border-red-500 pb-1">Galeri Produk</a></li>
           <li><a href="kontak.html" class="hover:text-blue-500">Kontak</a></li>
@@ -119,6 +150,8 @@
       </nav>
     </div>
   </div>
+</div>
+
 
   <!-- Banner -->
   <section class="banner text-center">
@@ -132,25 +165,92 @@
   <section class="container my-5">
     <div class="row">
       <div class="col-md-4 col-sm-6 col-12 mb-4">
-        <div class="card zoom-card" onclick="zoomImage('images/gambar1.jpeg')">
-          <img src="images/gambar1.jpeg" alt="Produk 1">
+        <div class="card zoom-card" onclick="zoomImage('images/bianglala.jpeg')">
+          <img src="images/bianglala.jpeg" alt="Bianglala" style="width: 300px; height: 300px;">
           <div class="zoom-icon">+</div>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 col-12 mb-4">
-        <div class="card zoom-card" onclick="zoomImage('images/gambar2.jpeg')">
-          <img src="images/gambar2.jpeg" alt="Produk 2">
+        <div class="card zoom-card" onclick="zoomImage('images/rainbowslide.jpeg')">
+          <img src="images/rainbowslide.jpeg" alt="Rainbow Slide" style="width: 500px; height: 300px;">
           <div class="zoom-icon">+</div>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 col-12 mb-4">
-        <div class="card zoom-card" onclick="zoomImage('images/gambar3.jpeg')">
-          <img src="images/gambar3.jpeg" alt="Produk 3">
+        <div class="card zoom-card" onclick="zoomImage('images/ontanganting.jpeg')">
+          <img src="images/ontanganting.jpeg" alt="Ontang-Anting" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/kudaputar.jpeg')">
+          <img src="images/kudaputar.jpeg" alt="Kuda Putar" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/korakora.jpeg')">
+          <img src="images/korakora.jpeg" alt="Kora-Kora" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/komedisafarikelapa.jpeg')">
+          <img src="images/komedisafarikelapa.jpeg" alt="Komedisafari Kelapa" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/komedigantung.jpeg')">
+          <img src="images/komedigantung.jpeg" alt="Komedigantung" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/kolampancingan.jpeg')">
+          <img src="images/kolampancingan.jpeg" alt="Kolam Pancingan" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/keretasepedamotor.jpeg')">
+          <img src="images/keretasepedamotor.jpeg" alt="Kereta Sepeda Motor" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/keretarell.jpeg')">
+          <img src="images/keretarell.jpeg" alt="Kereta Rell" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/keretaminitomas.jpeg')">
+          <img src="images/keretaminitomas.jpeg" alt="Kereta Mini Thomas" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/helyputar.jpeg')">
+          <img src="images/helyputar.jpeg" alt="Heli Putar" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/helygantung.jpeg')">
+          <img src="images/helygantung.jpeg" alt="Heli Gantung" style="width: 500px; height: 300px;">
+          <div class="zoom-icon">+</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12 mb-4">
+        <div class="card zoom-card" onclick="zoomImage('images/bebekair.jpeg')">
+          <img src="images/bebekair.jpeg" alt="Bebek Air" style="width: 500px; height: 300px;">
           <div class="zoom-icon">+</div>
         </div>
       </div>
     </div>
   </section>
+  
 
   <!-- Modal Zoom -->
   <div class="modal fade" id="zoomModal" tabindex="-1" aria-hidden="true">
@@ -169,6 +269,14 @@
   </a>
 
   <!-- Scripts -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+  
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     function zoomImage(src) {

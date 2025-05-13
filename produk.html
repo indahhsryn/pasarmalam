@@ -84,43 +84,69 @@
 </head>
 <body class="font-sans">
 
-  <!-- Main Navbar -->
-  <div class="sticky-navbar">
-    <div class="bg-teal-900 text-white text-sm py-1">
-      <div class="container-fluid px-4">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center">
-            <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
-          </div>
-        </div>
+<!-- Sticky Navbar -->
+<div class="sticky-navbar">
+  <!-- Topbar -->
+  <div class="bg-teal-900 text-white text-sm py-1">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 text-center md:text-left">
+      <div class="flex items-center justify-center space-x-4">
+        <span><i class="fas fa-phone-alt mr-1"></i> 081393223191</span>
       </div>
     </div>
-    <div class="container-fluid py-4">
-      <!-- Logo -->
-      <div class="d-flex flex-column align-items-center">
-        <div class="w-16 h-16 border-2 border-yellow-500 rounded-circle d-flex align-items-center justify-content-center text-2xl font-bold text-black">
-          FITO<span class="text-yellow-500">RIA</span>01
-        </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-4 relative">
+      
+<!-- Logo tengah (desktop only) -->
+<div class="hidden md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2 mb-4">
+  <div class="relative flex items-center justify-center space-x-1 text-2xl font-bold">
+    
+    <!-- 'FI' -->
+    <span class="text-black">FI</span>
+    
+    <!-- 'TORIA' dengan lingkaran -->
+    <div class="relative flex items-center justify-center">
+      <div class="absolute w-20 h-20 border-2 border-yellow-500 rounded-full"></div>
+      <span class="text-black-500 z-10">TO</span>
+      <span class="text-yellow-500 z-10">RIA</span>
+
+    </div>
+
+    <!-- '01' -->
+    <span class="text-black">01</span>
+  </div>
+</div>
+
+
+
+      <!-- Hamburger menu (mobile only) -->
+      <div class="w-full flex justify-end md:hidden">
+        <button id="menu-toggle" class="text-green-600 text-3xl focus:outline-none">
+          &#9776;
+        </button>
       </div>
 
-      <!-- Navigation Links -->
-      <nav class="mt-4">
-        <ul class="d-flex justify-content-center list-unstyled mb-0">
-          <li class="mx-3"><a href="index.html" class="text-black text-decoration-none">Beranda</a></li>
-          <li class="mx-3"><a href="produk.html" class="text-blue-500 border-bottom border-blue-500 pb-1">Produk Kami</a></li>
-          <li class="mx-3"><a href="galeri.html" class="text-black text-decoration-none">Galeri Produk</a></li>
-          <li class="mx-3"><a href="kontak.html" class="text-black text-decoration-none">Kontak</a></li>
+      <!-- Navigasi -->
+      <nav id="menu" class="w-full mt-4 md:mt-0 hidden md:flex md:justify-center" style="margin-top: 100px !important;">
+        <ul class="flex flex-col md:flex-row gap-6 text-sm font-semibold uppercase text-center">
+          <li><a href="#" class="hover:text-blue-500">Beranda</a></li>
+          <li><a href="produk.html" class="text-blue-500 border-b-2 border-red-500 pb-1">Produk Kami</a></li>
+          <li><a href="galeri.html" class="hover:text-blue-500">Galeri Produk</a></li>
+          <li><a href="kontak.html" class="hover:text-blue-500">Kontak</a></li>
         </ul>
       </nav>
     </div>
   </div>
+</div>
 
   <!-- Section: Banner -->
   <section class="banner">
     <div class="container">
       <h3 style="color: black;"><b>SEMUA PRODUK KAMI</b></h3>
       <p class="mt-3 text-muted">
-        Nikmati beragam pilihan wahana permainan anak dari FITORIA01, seperti kereta mini fiber, odong-odong, kora-kora, dan mainan custom lainnya yang dirancang menarik dan aman. Sangat ideal untuk menunjang bisnis hiburan anak di taman bermain, pusat perbelanjaan, atau destinasi wisata. Produk kami dibuat dengan bahan pilihan dan desain yang atraktif demi menghadirkan pengalaman bermain yang menyenangkan dan terpercaya.
+        Nikmati beragam pilihan wahana permainan anak dari FITORIA01, seperti komedi safari /kelapa, kereta mini tomas, kora-kora, dan mainan custom lainnya yang dirancang menarik dan aman. Sangat ideal untuk menunjang bisnis hiburan anak di taman bermain, pusat perbelanjaan, atau destinasi wisata. Produk kami dibuat dengan bahan pilihan dan desain yang atraktif demi menghadirkan pengalaman bermain yang menyenangkan dan terpercaya.
       </p>
     </div>
   </section>
@@ -131,37 +157,146 @@
       <!-- Card 1 -->
       <div class="col-12 col-sm-6 col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="images/gambar1.jpeg" class="card-img-top" alt="Kereta Mini Karakter Minions">
+          <img src="images/bianglala.jpeg" style="height: 300px !important; width: 300px !important;" class="card-img-top" alt="Bianglala">
           <div class="card-body">
-            <h5 class="card-title">Kereta Mini Karakter Minions</h5>
-            <p class="card-text">Mainan anak dengan tema karakter Minions, cocok untuk wahana bermain anak-anak di indoor/outdoor.</p>
+            <h5 class="card-title">Bianglala</h5>
+            <p class="card-text">Wahana permainan bianglala yang cocok untuk wahana bermain anak-anak di outdoor, memberikan pengalaman yang menyenangkan dengan pemandangan indah.</p>
           </div>
         </div>
       </div>
-
       <!-- Card 2 -->
       <div class="col-12 col-sm-6 col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="images/gambar2.jpeg" class="card-img-top" alt="Kereta Mini Pesawat">
+          <img src="images/rainbowslide.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Rainbow Slide">
           <div class="card-body">
-            <h5 class="card-title">Kereta Mini Pesawat</h5>
-            <p class="card-text">Desain pesawat yang menarik untuk anak-anak, memberikan pengalaman bermain yang seru dan edukatif.</p>
+            <h5 class="card-title">Rainbow Slide</h5>
+            <p class="card-text">Seluncuran warna-warni yang menyenangkan untuk anak-anak, memberikan sensasi seru saat bermain baik di dalam ruangan atau luar ruangan.</p>
           </div>
         </div>
       </div>
-
       <!-- Card 3 -->
       <div class="col-12 col-sm-6 col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="images/gambar3.jpeg" class="card-img-top" alt="Kereta Mini Karakter Kartun">
+          <img src="images/ontanganting.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Ontang-Anting">
           <div class="card-body">
-            <h5 class="card-title">Kereta Mini Karakter Kartun</h5>
-            <p class="card-text">Wahana dengan berbagai karakter kartun yang lucu, cocok untuk menarik perhatian anak-anak.</p>
+            <h5 class="card-title">Ontang-Anting</h5>
+            <p class="card-text">Wahana ontang-anting yang seru dan menantang, memberikan pengalaman terbang di udara untuk anak-anak dengan sensasi yang menyenangkan.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/kudaputar.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Kuda Putar">
+          <div class="card-body">
+            <h5 class="card-title">Kuda Putar</h5>
+            <p class="card-text">Kuda putar yang menggemaskan, wahana yang cocok untuk anak-anak bermain sambil berputar-putar dengan kuda lucu.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/korakora.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Kora-Kora">
+          <div class="card-body">
+            <h5 class="card-title">Kora-Kora</h5>
+            <p class="card-text">Wahana Kora-Kora yang mengasyikkan dengan gerakan berayun, cocok untuk pengunjung yang mencari sensasi menantang di taman hiburan.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/komedisafarikelapa.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Komedisafari Kelapa">
+          <div class="card-body">
+            <h5 class="card-title">Komedisafari Kelapa</h5>
+            <p class="card-text">Wahana dengan tema safari yang menghibur, cocok untuk anak-anak yang ingin merasakan pengalaman berkeliling dalam suasana hutan dengan kelapa raksasa.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 7 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/komedigantung.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Komedigantung">
+          <div class="card-body">
+            <h5 class="card-title">Komedigantung</h5>
+            <p class="card-text">Wahana komedi gantung dengan sensasi unik dan seru, cocok untuk anak-anak yang ingin merasakan sensasi melayang di udara sambil tertawa.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 8 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/kolampancingan.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Kolam Pancingan">
+          <div class="card-body">
+            <h5 class="card-title">Kolam Pancingan</h5>
+            <p class="card-text">Kolam pancingan untuk anak-anak yang suka tantangan, memberikan keseruan memancing ikan di dalam kolam dengan cara yang menyenangkan.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 9 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/keretasepedamotor.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Kereta Sepeda Motor">
+          <div class="card-body">
+            <h5 class="card-title">Kereta Sepeda Motor</h5>
+            <p class="card-text">Kereta yang menggabungkan konsep sepeda motor untuk pengalaman bermain yang lebih seru dan modern bagi anak-anak.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 10 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/keretarell.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Kereta Rel">
+          <div class="card-body">
+            <h5 class="card-title">Kereta Rel</h5>
+            <p class="card-text">Kereta rel untuk anak-anak yang memberikan pengalaman perjalanan seru melalui rel yang aman dan nyaman.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 11 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/keretaminitomas.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Kereta Mini Thomas">
+          <div class="card-body">
+            <h5 class="card-title">Kereta Mini Thomas</h5>
+            <p class="card-text">Kereta mini Thomas yang populer, cocok untuk anak-anak yang ingin merasakan pengalaman bermain dengan karakter kartun Thomas yang terkenal.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 12 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/helyputar.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Hely Putar">
+          <div class="card-body">
+            <h5 class="card-title">Hely Putar</h5>
+            <p class="card-text">Wahana heli putar yang memberikan pengalaman terbang dengan gaya yang menyenangkan dan aman bagi anak-anak.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 13 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/helygantung.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Hely Gantung">
+          <div class="card-body">
+            <h5 class="card-title">Hely Gantung</h5>
+            <p class="card-text">Wahana heli gantung yang seru dan menantang, cocok untuk anak-anak yang ingin merasakan sensasi melayang di udara.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 14 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/bebekair.jpeg" style="height: 300px !important; width: 500px !important;" class="card-img-top" alt="Bebek Air">
+          <div class="card-body">
+            <h5 class="card-title">Bebek Air</h5>
+            <p class="card-text">Wahana bebek air yang menyenangkan, cocok untuk anak-anak bermain di air dengan sensasi bergerak di atas permukaan air menggunakan bebek lucu.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
 
   <!-- WhatsApp Button -->
   <a href="https://wa.me/6281393223191" class="wa-float" target="_blank">
